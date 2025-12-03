@@ -1,0 +1,43 @@
+/* 網頁基本設定 */
+body {
+    font-family: Arial, sans-serif;   /* 字體 */
+    background: #f1f1f1;            /* 背景顏色（淡灰色） */
+    text-align: center;               /* 文字置中 */
+    margin: 0;                        /* 去掉預設外距 */
+    padding: 0;                       /* 去掉預設內距 */
+}
+
+/* 包住所有內容的容器 */
+.container {
+    margin-top: 100px;                /* 距離上方 100px */
+}
+
+/* 主標題設定 */
+h1 {
+    font-size: 40px;                  /* 標題字體大小 */
+    margin-bottom: 20px;              /* 與下方文字的距離 */
+}
+
+/* 遊戲介紹段落 */
+.description {
+    font-size: 18px;                  /* 介紹文字大小 */
+    color: #555;                    /* 深灰色 */
+    margin-bottom: 40px;              /* 與按鈕的距離 */
+}
+
+/* 開始按鈕的外觀 */
+.start-btn {
+    display: inline-block;            /* 讓按鈕變成可設定大小的區塊 */
+    padding: 15px 30px;               /* 內距（按鈕大小） */
+    font-size: 24px;                  /* 字體大小 */
+    color: white;                     /* 文字顏色 */
+    background: #0078ff;            /* 按鈕背景色（藍色） */
+    text-decoration: none;            /* 移除底線 */
+    border-radius: 10px;              /* 圓角 */
+    transition: 0.2s;                 /* 滑過時的變化速度 */
+}
+
+/* 滑鼠移到按鈕時（hover） */
+.start-btn:hover {
+    background: #005fcc;            /* 顏色變深，給使用者回饋 */
+}
