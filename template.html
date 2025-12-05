@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Pygame小遊戲</title>
+
+        <link rel="stylesheet" href="custom.css">
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div id="intro-screen">
+                <h1>點數字 — Pygame 小遊戲</h1>
+                <p class="description">
+                    挑戰你的反應速度！<br>
+                    由小至大按順序點擊畫面上的數字，看你能多快完成！
+                </p>    
+
+                <button class="start-btn" onclick="startGame()">開始遊戲</button>
+            </div>
+                                
+            <div class="game-area" style="display: none;">           '將 <canvas> 包裹在一個 <div class="game-area"> 裡，並給它一個初始樣式 style="display: none;"，確保遊戲載入時它不會顯示。 '
+                <canvas id="pygame-canvas" width="{{ width }}" height="{{ height }}"></canvas>
+            </div>
+
+            <div id="game-over-screen" style="display: none;">
+            </div>
+        </div>
+        
+        <script src="pyscript.js"></script> 
+        <script>
+            // 確保Pygbag載入完成，然後能啟動遊戲
+            function startGame() {
+            // 隱藏介紹畫面(按鈕/標題)
+            document.getElementById('intro-screen').style.display = 'none';
+
+            // 顯示遊戲畫布
+            document.querySelector('.game-area').style.display = 'flex'; // 使用 flex 來保持居中
+
+            // 觸發Pygbag啟動 (處理 UME - User Media Engagement)
+            // Pygbag內部的方法，用來確保音訊和遊戲引擎在用戶點擊後啟動
+            window.MM.ume_ready(true); 
+            }
+        </script>
+        
+    </body>
+</html>
