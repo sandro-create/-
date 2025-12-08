@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>點數字</title>
+</head>
+<body>
+<p>歡迎來到點數字</p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>開始與結束按鈕</title>
+<style>
+  body {
+    font-family: Arial;
+    text-align: center;
+    margin-top: 50px;
+  }
+  button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+  }
+  #status {
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<button onclick="startAction()">開始</button>
+<button onclick="stopAction()">結束</button>
+
+<div id="status">--</div>
+
+<script>
+  function startAction() {
+    document.getElementById("status").innerText = "已開始";
+  }
+
+  function stopAction() {
+    document.getElementById("status").innerText = "已結束";
+  }
+</script>
+
+</body>
+</html>
