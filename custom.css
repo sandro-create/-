@@ -12,6 +12,13 @@ body {
     margin-top: 100px;                /* 距離上方 100px */
 }
 
+/* 遊戲介紹畫面的容器 (可選，但建議保留) */
+#intro-screen {
+    /* 如果未來需要限制介紹畫面的寬度，可以在這裡設定 */
+    /* max-width: 600px; */
+    /* margin: auto; */ 
+}
+
 /* 主標題設定 */
 h1 {
     font-size: 40px;                  /* 標題字體大小 */
@@ -55,18 +62,18 @@ h1 {
     background: #005fcc;            /* 顏色變深，給使用者回饋 */
 }
 
-/* Pygame 遊戲的畫布 (重要!) */
-#pygame-canvas {
-    display: block; 
-    /* 遊戲畫布的邊框，讓它在淺灰色背景上被看到 */
-    border: 3px solid #0078ff; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
 /* 遊戲結束畫面的樣式 (當遊戲結束時顯示) */
 #game-over-screen {
     /* 確保文字置中和樣式 */
     margin-top: 100px;
     font-size: 24px;
     color: #333;
+}
+
+/* Pygame 遊戲的畫布 (重要!) */
+#pygame-canvas {
+    display: block; 
+    /* 遊戲畫布的邊框，讓它在淺灰色背景上被看到 */
+    border: 3px solid #0078ff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
