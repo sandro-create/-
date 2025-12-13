@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>開始與結束按鈕</title>
+
+<!-- 連結外部 CSS -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<button onclick="startAction()">開始</button>
+<button onclick="stopAction()">結束</button>
+
+<div id="status">--</div>
+
+<script>
+  function startAction() {
+    document.getElementById("status").innerText = "已開始";
+  }
+
+  function stopAction() {
+    document.getElementById("status").innerText = "已結束";
+  }
+</script>
+
+</body>
+</html>
