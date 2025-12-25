@@ -1,79 +1,61 @@
-/* 網頁基本設定 */
 body {
-    font-family: Arial, sans-serif;   /* 字體 */
-    background: #f1f1f1;            /* 背景顏色 */
-    text-align: center;               /* 文字置中 */
-    margin: 0;                        /* 去掉預設外距 */
-    padding: 0;                       /* 去掉預設內距 */
-}
-
-/* 包住所有內容的容器 */
-.container {
-    margin-top: 100px;                /* 距離上方 100px */
-}
-
-/* 遊戲介紹畫面的容器 (可選，但建議保留) */
-#intro-screen {
-    /* 如果未來需要限制介紹畫面的寬度，可以在這裡設定 */
-    /* max-width: 600px; */
-    /* margin: auto; */ 
-}
-
-/* 主標題設定 */
-h1 {
-    font-size: 40px;                  /* 標題字體大小 */
-    margin-bottom: 20px;              /* 與下方文字的距離 */
-}
-
-/* 遊戲介紹段落 */
-.description {
-    font-size: 18px;                  /* 介紹文字大小 */
-    color: #555;                    /* 文字顏色 */
-    margin-bottom: 40px;              /* 與按鈕的距離 */
-}
-
-/* 確保 .game-area 啟用 flex 佈局以配合 JS 顯示 */
-.game-area {
-    /* 這是為了讓畫布能在頁面中居中 */
-    display: flex; 
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f9fa;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
     justify-content: center;
+}
+
+.container {
+    margin-top: 50px;
+    padding: 20px;
+    max-width: 600px;
+}
+
+h1 { font-size: 36px; color: #333; }
+
+.description {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-top: 40px; 
 }
 
-/* 開始按鈕的外觀 */
-.start-btn {
-    display: inline-block;      /* 讓按鈕變成可設定大小的區塊 */
-    padding: 15px 30px;         /* 內距（按鈕大小） */
-    font-size: 24px;            /* 字體大小 */
-    color: white;             /* 文字顏色 */
-    background: #0078ff;      /* 按鈕背景色（藍色） */
-    /* 確保按鈕有適當的邊界 */
-    text-decoration: none;      /* 移除底線 */
-    border: none; 
-    border-radius: 10px;        /* 圓角 */
-    cursor: pointer;            /* 顯示可點擊的手勢 */
-    transition: 0.2s;           /* 滑過時的變化速度 */
-    margin-bottom: 40px; 
-}
-
-/* 滑鼠移到按鈕時（hover） */
-.start-btn:hover {
-    background: #005fcc;            /* 顏色變深，給使用者回饋 */
-}
-
-/* 遊戲結束畫面的樣式 (當遊戲結束時顯示) */
-#game-over-screen {
-    /* 確保文字置中和樣式 */
-    margin-top: 100px;
-    font-size: 24px;
-    color: #333;
-}
-
-/* Pygame 遊戲的畫布 (重要!) */
 #pygame-canvas {
-    display: block; 
-    /* 遊戲畫布的邊框，讓它在淺灰色背景上被看到 */
-    border: 3px solid #0078ff; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 100%; /* 確保手機上不會超出螢幕 */
+    height: auto;
+    border: 4px solid #0078ff;
+    border-radius: 8px;
+    background-color: #000;
+    touch-action: none; /* 防止手機捲動干擾遊戲 */
+    -webkit-tap-highlight-color: transparent;
 }
+
+#game-over-screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    padding: 15px 40px;
+    font-size: 22px;
+    color: white;
+    background: #0078ff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.2s;
+    box-shadow: 0 4px 15px rgba(0,120,255,0.3);
+}
+
+.btn:hover { background: #005fcc; }
+.btn:active { transform: scale(0.95); }
